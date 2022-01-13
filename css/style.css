@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #30124d;
+    --clr-bright: #592b85;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --fs-icons: 2rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+        --fs-icons: 2.25rem;
+    }
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0; 
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 1em 2em;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+.intro-title {
+    margin-bottom: 0.25em;
+    font-weight: var(--fw-reg);
+}
+
+.intro-title strong {
+    display: block;
+}
+
+.intro-subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    color: var(--clr-light);
+    margin-bottom: 1em;
+}
+
+.header-part {
+    margin: 0;
+    float: left;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+.mobile-header {
+    top: 0;
+    position: sticky;
+}
+
+.gradient {
+    height: 5px;
+    margin: 0;
+    border: 0;
+
+    padding: 0;
+    background-image: linear-gradient(to right, purple,rgb(24, 146, 228), magenta);
+}
+
+.nav-list {
+    margin: 0;
+    background-color: var(--clr-light);
+    overflow: hidden;
+    list-style-type: none;
+    height: 50px;
+    line-height: 50px;
+}
+
+.nav-list li a {
+    float: left;
+    color: var(--clr-dark);
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+    margin: 0;
+}
+
+.nav-list .social_item a i {
+    color: var(--clr-dark);
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: var(--fs-icons);
+    margin: 0;
+}
+
+.nav-list .social_item a {
+    float: right;
+}
+
+.nav-list li a:hover, .nav-list li a i:hover {
+    color: var(--clr-bright)
+}
+
+.help {
+    max-width: 300px;
+}
+
