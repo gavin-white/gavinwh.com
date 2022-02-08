@@ -23,8 +23,11 @@
     --fs-body: 1rem;
     --fs-icons: 2rem;
     --fs-navbar: 1.1rem;
+
+    --shadow: .25em .25em .75em rgba(0, 0, 0, 0.5);
 }
 
+/* increase font sizes when the window is large */
 @media (min-width: 900px) {
     :root {
         --fs-h1: 4.5rem;
@@ -43,7 +46,6 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-
 }
 
 img {
@@ -52,7 +54,7 @@ img {
 }
 
 section {
-    padding: 1em 2em;
+    padding: 3em 2em;
 }
 
 h1, h2, h3 {
@@ -76,12 +78,19 @@ h3 {
     font-size: var(--fs-h3);
 }
 
+.intro {
+    max-width: 475px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .intro-title {
     margin-bottom: 0.25em;
+    align-content: center;
     font-weight: var(--fw-reg);
 }
 
-.intro-title strong {
+.intro-title strong { /* put the bolded text (name) below introduction */
     display: block;
 }
 
@@ -93,12 +102,22 @@ h3 {
     color: var(--clr-light);
     padding: 1em;
     margin-bottom: 1em;
+    text-align: center;
+
 }
 
-@media (min-width: 600px) {
+.intro-img {
+    box-shadow: var(--shadow);
+    
+}
+
+/* rearange things when screen size is big enough */
+/* this handles responsiveness for mobile/desktop */
+@media (min-width: 700px) {
     .intro {
         display: grid;
         grid-column-gap: 1em;
+        max-width: min-content;
         width: min-content;
         margin: 0 auto;
         grid-template-areas:
@@ -108,12 +127,18 @@ h3 {
 
     }
 
+    .intro-subtitle {
+        text-align: left;
+        display: inline-block;
+    }
+
     .intro-img {
         grid-area: img;
         min-width: 300px;
         max-width: 100%;
         height: auto;
     }
+
 }
 
 .header-part {
@@ -122,6 +147,8 @@ h3 {
     max-height: 50px;
     min-height: 50px;
 }
+
+/* Navigation bar */
 
 .mobile-header {
     top: 0;
@@ -174,11 +201,25 @@ h3 {
     color: var(--clr-bright)
 }
 
+/* About section */
+
 .about {
+    background-color: #3f3f3f;
     background-image: url("../img/mfa.jpg");
-    background-size: 1300px;
+    background-size: cover;
+    background-blend-mode: multiply;
+    text-align: center;
 }
 
 .abt-sections, .abt-title {
     color: var(--clr-light);
+}
+
+.abt-title::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
 }
