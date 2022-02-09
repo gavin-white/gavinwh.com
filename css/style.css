@@ -130,6 +130,7 @@ h3 {
     .intro-title {
         text-align: center;
         padding-bottom: 0;
+        margin-top: 0.25em;
     }
 
     .intro-subtitle {
@@ -138,15 +139,22 @@ h3 {
         height: min-content;
         padding-top: 1.75em;
         padding-bottom: 1.75em;
+        
     }
 
     .intro-img {
         grid-area: img;
-        min-width: 300px;
-        max-width: 100%;
+        min-width: 250px;
         height: auto;
     }
 
+}
+
+/* Resize picture at large screen sizes */
+@media (min-width: 900px) {
+    .intro-img {
+        min-width: 300px;
+    }
 }
 
 .header-part {
