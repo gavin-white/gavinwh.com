@@ -16,6 +16,7 @@
     --clr-dark: #303030;
     --clr-accent: #30124d;
     --clr-bright: #592b85;
+    --clr-superbright: #d7b0fc;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -217,7 +218,7 @@ h3 {
 }
 
 .nav-list li a:hover, .nav-list li a i:hover {
-    color: var(--clr-bright)
+    color: var(--clr-bright);
 }
 
 /* About section */
@@ -256,4 +257,41 @@ h3 {
     .abt-section + .abt-section {
         margin-bottom: 2em;
     }
+}
+
+/* footer style */
+
+footer {
+    background: #111;
+    color: var(--clr-light);
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.socials {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.socials .social_item a {
+    text-decoration: none;
+}
+
+.socials li a i {
+    font-size: var(--fs-icons);
+    color: var(--clr-light);
+    margin: 0 2em;
+}
+
+/* when links are hovered over, change color */
+.socials li a i:hover {
+    color: var(--clr-superbright);
+}
+
+/* resume page styling */
+.resume-frame {
+    margin: 1em 1em;
+    width: calc(100% - 2em);
+    height: 85vh;
 }
