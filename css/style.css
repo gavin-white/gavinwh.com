@@ -224,9 +224,12 @@ h3 {
     background-image: url("../img/mfa.jpg");
     background-size: cover;
     background-blend-mode: multiply;
-    text-align: center;
+    text-align: left;
 }
 
+.abt-title {
+    text-align: center;
+}
 .abt-sections, .abt-title {
     color: var(--clr-light);
 }
@@ -239,4 +242,15 @@ h3 {
     margin: 0.5em auto 1em;
     background: var(--clr-light);
     opacity: 0.5;
+}
+
+@media (min-width: 800px) {
+    .abt-sections {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    .abt-section + .abt-section {
+        margin-bottom: 2em;
+    }
 }
