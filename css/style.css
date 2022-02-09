@@ -127,9 +127,17 @@ h3 {
 
     }
 
+    .intro-title {
+        text-align: center;
+        padding-bottom: 0;
+    }
+
     .intro-subtitle {
-        text-align: left;
+        text-align: center;
         display: inline-block;
+        height: min-content;
+        padding-top: 1.75em;
+        padding-bottom: 1.75em;
     }
 
     .intro-img {
@@ -222,4 +230,5 @@ h3 {
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
+    opacity: 0.5;
 }
