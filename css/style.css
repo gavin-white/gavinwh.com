@@ -265,28 +265,112 @@ footer {
     background: #111;
     color: var(--clr-light);
     text-align: center;
-    padding: 2.5em 0;
+    padding: 0em 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
-.socials {
+.footer-items {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
-.socials .social_item a {
+.footer-items .footer_item a {
     text-decoration: none;
+    font-size:var(--fs-h3);
 }
 
-.socials li a i {
+.footer-items li a i {
     font-size: var(--fs-icons);
     color: var(--clr-light);
-    margin: 0 2em;
+    margin: 0.75em 2em;
+}
+
+.footer-items li a i:hover {
+    color: var(--clr-superbright);
 }
 
 /* when links are hovered over, change color */
 .socials li a i:hover {
     color: var(--clr-superbright);
+}
+
+/* contact section style */
+.contact {
+    background-color: #3f3f3f;
+    background-image: url("../img/christianss.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    text-align: left;
+}
+
+.contact-title {
+    text-align: center;
+}
+.contact-sections, .contact-title {
+    color: var(--clr-light);
+}
+
+.contact-title::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.5;
+}
+
+.socials {
+    list-style-type: none;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+
+.socials .social_item a {
+    text-decoration: none;
+    font-size:var(--fs-h3);
+}
+
+.socials li a i {
+    font-size: var(--fs-icons);
+    color: var(--clr-light);
+    margin: 0.5em 1.25em;
+}
+
+/* when links are hovered over, change color */
+.socials li a i:hover {
+    color: var(--clr-superbright);
+}
+
+@media (min-width: 800px) {
+    .contact-sections {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    .contact-section {
+        margin-bottom: 4em;
+    }
+
+    .contact-section + .contact-section {
+        margin-bottom: 2em;
+    }
+
+    .socials {
+        display: flex;
+    }
+}
+
+@media (min-width: 1100px) {
+    .socials li a i {
+        margin: 0 2em;
+    }
 }
 
 /* resume page styling */
