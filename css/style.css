@@ -26,6 +26,7 @@
     --fs-navbar: 1.1rem;
 
     --shadow: .25em .25em .75em rgba(0, 0, 0, 0.5);
+    --lightshadow: .25em .25em .75em rgba(0, 0, 0, 0.2);
 }
 
 /* increase font sizes when the window is large */
@@ -273,10 +274,71 @@ h3 {
     }
 }
 
+/* beyond section -- cards to go to project/resume pages */
+
+.beyond {
+    display: flex;
+    justify-content: center;
+    margin: 75px 0;
+}
+
+/* Total hack to get the div clickable */
+.click-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.card {
+    width: 40%;
+    height: auto;
+    outline-color: var(--clr-dark);
+    outline-width: 2px;
+    outline-style: solid;
+    border-radius: 2px;
+    margin: 0 4em;
+    text-align: center;
+    padding-top: 1em;
+    transition: all 0.25s ease;
+    box-shadow: var(--lightshadow);
+    padding: 1em 1em;
+}
+
+.card-label::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 2px;
+    margin: 0.5em auto;
+    background: var(--clr-dark);
+    opacity: 0.5;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transform-origin: center;
+}
+
+@media (max-width: 900px) {
+    .beyond {
+        display: inline;
+        align-content: center;
+    }
+    
+    .card {
+        margin: 3em auto;
+        width: 80%;
+    }
+}
+
 /* when links are hovered over, change color */
 .socials li a i:hover {
     color: var(--clr-superbright);
 }
+
 
 /* contact section style */
 .contact {
@@ -321,11 +383,6 @@ h3 {
     font-size: var(--fs-icons);
     color: var(--clr-light);
     margin: 0.5em 1.25em;
-}
-
-/* when links are hovered over, change color */
-.socials li a i:hover {
-    color: var(--clr-superbright);
 }
 
 @media (min-width: 800px) {
