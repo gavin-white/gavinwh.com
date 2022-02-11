@@ -3,3 +3,43 @@
     text-align: center;
     margin: 1em 1em;
 }
+
+/* footer style */
+
+footer {
+    background: #111;
+    color: var(--clr-light);
+    text-align: center;
+    padding: 0em 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-items .footer_item a {
+    text-decoration: none;
+    font-size:var(--fs-h3);
+}
+
+.footer-items li a i {
+    font-size: var(--fs-icons);
+    color: var(--clr-light);
+    margin: 0.75em 1.5em;
+}
+
+.footer-items li a i:hover {
+    color: var(--clr-superbright);
+}
+
+@media (min-width: 700px) {
+    .footer-items li a i {
+        margin: 0.75em 2.5em;
+    }
+}

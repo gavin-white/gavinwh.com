@@ -12,6 +12,18 @@
         <script src="https://kit.fontawesome.com/aa4afb7fb9.js" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="css/style.css">
+
+        <script>
+            /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+            function myFunction() {
+            var x = document.getElementById("nav-list");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+            }
+        </script>
     </head>
     <body>
         <!-- Header -->
@@ -21,13 +33,15 @@
                 <a href="http://www.gavinwh.com"><img src="img/gwlogo.png" alt="" class="header-part"></a>
             </div>
             <nav>
-                <ul class="nav-list">
+                <ul class="nav-list" id="nav-list">
                     <li class="nav_item"><a href="/projects" class="nav_link">Projects</a></li>
                     <li class="nav_item"><a href="/resume" class="nav_link">Resume</a></li>
                     <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
                     <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
                     <li class="social_item"><a href="https://linkedin.com/in/gavinwh" class="social_item-link"><i class="fab fa-linkedin"></i></a></li>
                     <li class="social_item"><a href="https://github.com/gavin-white" class = "social_item-link"><i class="fab fa-github"></i></i></a></li>
+                    <li><a href="javascript:void(0)" class="hamburger" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+                    
                 </ul>
             </nav>
         </header>
