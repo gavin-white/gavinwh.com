@@ -228,17 +228,12 @@ h3 {
         display: none;
     }
 
-    .nav-list li a {
-        padding: 0 16px;
+    .nav-list {
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 
-/* very small screens get items even closer */
-@media (max-width: 450px) {
-    .nav-list li a {
-        padding: 0 10px;
-    }
-}
 
 /* About section */
 
