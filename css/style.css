@@ -222,6 +222,24 @@ h3 {
     color: var(--clr-bright);
 }
 
+/* Hide GitHub and LinkedIn icons at small screen sizes */
+@media (max-width: 700px) {
+    .nav-list .social_item a {
+        display: none;
+    }
+
+    .nav-list li a {
+        padding: 0 16px;
+    }
+}
+
+/* very small screens get items even closer */
+@media (max-width: 400px) {
+    .nav-list li a {
+        padding: 0 10px;
+    }
+}
+
 /* About section */
 
 .about {
