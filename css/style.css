@@ -172,6 +172,7 @@ h3 {
 /* Navigation bar */
 
 .mobile-header {
+    z-index: 100;
     top: 0;
     position: sticky;
 }
