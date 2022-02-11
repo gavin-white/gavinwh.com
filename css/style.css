@@ -234,7 +234,7 @@ h3 {
 }
 
 /* very small screens get items even closer */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .nav-list li a {
         padding: 0 10px;
     }
