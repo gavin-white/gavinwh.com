@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-}
+} 
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
@@ -289,14 +289,15 @@ h3 {
 }
 
 /* Total hack to get the div clickable */
-/* .click-box::before {
+ /* .click-box::before {
     content: " ";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  } */
+    background-color: greenyellow;
+  }  */
 
 .card {
     width: 40%;
