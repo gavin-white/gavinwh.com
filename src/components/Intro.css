@@ -1,0 +1,75 @@
+/* Introduction Styles */
+.intro {
+    max-width: 475px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-title {
+    margin-bottom: 0.25em;
+    align-content: center;
+    text-align: center;
+    font-weight: var(--fw-reg);
+}
+
+.intro-title strong {
+    /* put the bolded text (name) below introduction */
+    display: block;
+}
+
+.intro-subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    color: var(--clr-light);
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.intro-img {
+    box-shadow: var(--shadow);
+}
+
+/* Rearrange things when screen size is big enough */
+@media (min-width: 700px) {
+    .intro {
+        display: grid;
+        grid-column-gap: 1em;
+        max-width: min-content;
+        width: min-content;
+        margin: 0 auto;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro-title {
+        text-align: center;
+        padding-bottom: 0;
+        margin-top: 0.25em;
+    }
+
+    .intro-subtitle {
+        text-align: center;
+        display: inline-block;
+        height: min-content;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .intro-img {
+        grid-area: img;
+        min-width: 250px;
+        height: auto;
+    }
+}
+
+/* Resize picture at large screen sizes */
+@media (min-width: 900px) {
+    .intro-img {
+        min-width: 300px;
+    }
+}

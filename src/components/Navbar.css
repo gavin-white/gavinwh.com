@@ -1,0 +1,79 @@
+/* Navbar Styles */
+
+.header-part {
+    margin: 0;
+    float: left;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+.mobile-header {
+    z-index: 100;
+    top: 0;
+    position: sticky;
+}
+
+.gradient {
+    height: 4px;
+    margin: 0;
+    border: 0;
+    background-image: linear-gradient(to right, purple, rgb(24, 146, 228), magenta);
+}
+
+.logo img {
+    max-height: 50px;
+    height: auto;
+}
+
+.nav-list {
+    margin: 0;
+    background-color: var(--clr-light);
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    list-style-type: none;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+}
+
+.nav-list li a {
+    float: left;
+    color: var(--clr-dark);
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: var(--fs-navbar);
+    font-family: var(--ff-ternary);
+    margin: 0;
+}
+
+.nav-list .social_item a i {
+    color: var(--clr-dark);
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: var(--fs-icons);
+    margin: 0;
+}
+
+.nav-list .social_item a {
+    float: right;
+}
+
+.nav-list li a:hover,
+.nav-list li a i:hover {
+    color: var(--clr-bright);
+}
+
+/* Hide GitHub and LinkedIn icons at small screen sizes */
+@media (max-width: 700px) {
+    .nav-list .social_item a {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
