@@ -31,7 +31,19 @@
 }
 
 /* Increase font sizes when the window is large */
-@media (min-width: 900px) {
+@media (min-width: 850px) {
+  :root {
+      --fs-h1: 3.25rem;
+      --fs-h2: 2.5rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.125rem;
+      --fs-icons: 2.2rem;
+      --fs-navbar: 1.2rem;
+  }
+}
+
+/* Increase font sizes when the window is large */
+@media (min-width: 1000px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;

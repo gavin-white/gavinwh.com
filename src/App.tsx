@@ -8,7 +8,6 @@ import Conact from './components/Contact';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import NotFound from './components/NotFound';
-import './App.css';
 
 /*
   * This component is used to scroll to an element with the id specified in the URL hash.

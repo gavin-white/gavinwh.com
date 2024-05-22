@@ -1,4 +1,5 @@
 import React from 'react';
+import Tilt from 'react-parallax-tilt';
 import './Intro.css';
 
 const Intro: React.FC = () => {
@@ -8,9 +9,11 @@ const Intro: React.FC = () => {
         Hello, I'm <strong>Gavin White</strong>
       </h1>
       <div className="intro-subtitle">
-        Computer Science Student, <br /> Teaching Assistant, <br /> Software Engineer
+        Software Engineer, <br /> Computer Scientist, <br /> Technology Enthusiast
       </div>
-      <img src={`${process.env.PUBLIC_URL}/img/gavinpic.jpg`} alt="Gavin" className="intro-img" />
+      <Tilt className="tilt" tiltMaxAngleX={12.5} tiltMaxAngleY={12.5} scale={1} transitionSpeed={100}>
+        <img src={`${process.env.PUBLIC_URL}/img/gavinpic.jpg`} alt="Gavin" className="intro-img" />
+      </Tilt>
     </section>
   );
 };
