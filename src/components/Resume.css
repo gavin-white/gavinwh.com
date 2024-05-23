@@ -1,0 +1,15 @@
+.resume-page {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.resume-frame {
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 54px); /* 54px is heigh of navbar */
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+  

@@ -3,7 +3,7 @@
 ## About
 **See the website in action:** [gavinwh.com](https://gavinwh.com)
 
-This is my personal website that I built from scratch. As this was my first major website, I chose not to use any template or framework; this way, I was able to get more experience learning the fundamentals of HTML and CSS. The website is responsive and can easily be viewed on devices of various sizes.
+This is my personal website that I build from scratch. The website was initially purely static HTML and CSS and was deployed on GitHub Pages. I later refactored the site to be a React app in order to make it easier to manage and extend. I chose to use TypeScript with React to enable more complex interactions on the site. For better support of React web applications, I switched to Netlify as my host. The website was built to be responsive and can easily be viewed on devices of various sizes.
 
 ## What's Included
 
