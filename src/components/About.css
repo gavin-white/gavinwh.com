@@ -17,6 +17,10 @@
     color: var(--clr-light);
 }
 
+.abt-section p + p {
+    margin-top: 1em;
+}
+
 .abt-title::after {
     content: '';
     display: block;
