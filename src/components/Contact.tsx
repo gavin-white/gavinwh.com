@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
       <ul className="socials">
-        <li className="social_item"><a href="mailto:white.g@northeastern.edu" className="social_item-link"><i className="fas fa-envelope"> <strong>Email</strong></i></a></li>
+        <li className="social_item"><a href="mailto:gavinwh5@gmail.com" className="social_item-link"><i className="fas fa-envelope"> <strong>Email</strong></i></a></li>
         <li className="social_item"><a href="https://linkedin.com/in/gavinwh" className="social_item-link"><i className="fab fa-linkedin"> <strong>LinkedIn</strong></i></a></li>
         <li className="social_item"><a href="https://github.com/gavin-white" className="social_item-link"><i className="fab fa-github"> <strong>GitHub</strong></i></a></li>
       </ul>
