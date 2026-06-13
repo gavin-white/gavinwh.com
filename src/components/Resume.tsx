@@ -6,7 +6,7 @@ const Resume: React.FC = () => {
     <>
       <div className="resume-page">
           <iframe
-            src="/assets/resume-website.pdf"
+            src="https://resume.gavinwh.com/resume.pdf"
             allow="autoplay"
             className="resume-frame"
             title="Gavin White's Resume"
