@@ -15,39 +15,18 @@
     display: flex;
     flex-direction: column;
     padding: 1.5em;
-    max-width: 85%;
+    width: 100%;
+    max-width: 100%;
     background: none;
     border: 1px solid var(--clr-border);
     border-radius: 2px;
     box-shadow: none;
     transition: border-color 0.2s ease;
+    text-align: left;
 }
 
 .project-card:hover {
     border-color: rgba(215, 176, 252, 0.35);
-}
-
-.project-card:nth-child(odd) {
-    align-self: flex-start;
-    text-align: left;
-}
-
-.project-card:nth-child(even) {
-    align-self: flex-end;
-    text-align: right;
-}
-
-.project-card:nth-child(even) .project-name::after {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.project-card:nth-child(even) .project-tech {
-    justify-content: flex-end;
-}
-
-.project-card:nth-child(even) .project-links {
-    justify-content: flex-end;
 }
 
 .project-name {
@@ -115,6 +94,30 @@
 @media (min-width: 800px) {
     .project-card {
         padding: 2em;
+        max-width: 85%;
+    }
+
+    .project-card:nth-child(odd) {
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .project-card:nth-child(even) {
+        align-self: flex-end;
+        text-align: right;
+    }
+
+    .project-card:nth-child(even) .project-name::after {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .project-card:nth-child(even) .project-tech {
+        justify-content: flex-end;
+    }
+
+    .project-card:nth-child(even) .project-links {
+        justify-content: flex-end;
     }
 
     .project-name::after {
