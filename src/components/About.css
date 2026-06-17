@@ -8,27 +8,12 @@
     text-align: left;
 }
 
-.abt-title {
-    text-align: center;
-}
-
-.abt-sections,
-.abt-title {
+.abt-sections {
     color: var(--clr-light);
 }
 
 .abt-section p + p {
     margin-top: 1em;
-}
-
-.abt-title::after {
-    content: '';
-    display: block;
-    width: 25%;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.5;
 }
 
 @media (min-width: 800px) {

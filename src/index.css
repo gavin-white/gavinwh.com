@@ -19,12 +19,18 @@
     --clr-bright: #592b85;
     --clr-superbright: #d7b0fc;
 
+    /* Dark theme surfaces */
+    --clr-bg: #000000;
+    --clr-surface: #1a1a1a;
+    --clr-border: rgba(255, 255, 255, 0.12);
+
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     --fs-icons: 2rem;
     --fs-navbar: 1.1rem;
+    --fs-form: 0.9rem;
 
     --shadow: .25em .25em .75em rgba(0, 0, 0, 0.5);
     --lightshadow: .25em .25em .75em rgba(0, 0, 0, 0.2);
@@ -55,12 +61,12 @@
 }
 
 body, html {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-bg);
+    color: var(--clr-light);
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: var(--ff-primary);
+    font-family: var(--ff-primary), serif;
     font-size: var(--fs-body);
     line-height: 1.6;
 }
@@ -72,6 +78,56 @@ img {
 
 section {
     padding: 3em 2em;
+}
+
+/* Subtle graph paper grid background */
+.bg-grid {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+}
+
+.bg-grid > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Vertical fade to black over background images */
+.bg-fade-vertical {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-fade-vertical::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: linear-gradient(
+        to bottom,
+        var(--clr-bg) 0%,
+        transparent 10%,
+        transparent 90%,
+        var(--clr-bg) 100%
+    );
+}
+
+.bg-fade-vertical > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* Setting up font sizes and colors */
@@ -94,4 +150,32 @@ h2 {
 
 h3 {
     font-size: var(--fs-h3);
+}
+
+.section-title {
+    font-size: var(--fs-h2);
+    text-align: center;
+    color: var(--clr-light);
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 1.25em;
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+}
+
+.section-title::before,
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    min-width: 1.5rem;
+}
+
+.section-title::before {
+    background: linear-gradient(90deg, transparent, rgba(215, 176, 252, 0.5));
+}
+
+.section-title::after {
+    background: linear-gradient(90deg, rgba(215, 176, 252, 0.5), transparent);
 }

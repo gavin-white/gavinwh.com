@@ -3,8 +3,8 @@ import './About.css';
 
 const About: React.FC = () => {
   return (
-    <section className="about" id="about">
-      <h2 className="abt-title">Who am I?</h2>
+    <section className="about bg-fade-vertical" id="about">
+      <h2 className="section-title">About</h2>
       <div className="abt-sections">
         <div className="abt-section">
           <h3>My Experience</h3>

@@ -1,13 +1,11 @@
 .resume-page {
-    html, body {
-        overflow: hidden;
-    }
+    padding-top: 54px; /* 54px is height of the fixed navbar */
 }
 
 .resume-frame {
-    flex: 1;
+    display: block;
     width: 100%;
-    height: calc(100vh - 54px); /* 54px is heigh of navbar */
+    height: calc(100vh - 54px); /* fill the viewport below the navbar */
     border: none;
     margin: 0;
     padding: 0;

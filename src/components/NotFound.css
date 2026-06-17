@@ -1,3 +1,12 @@
 .not-found {
   font-size: 2rem;
 }
+
+.not-found a {
+  color: var(--clr-superbright);
+  text-decoration: none;
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+}

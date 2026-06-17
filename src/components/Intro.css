@@ -1,8 +1,20 @@
 /* Introduction Styles */
 .intro {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    overflow: hidden;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 1;
     max-width: 475px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .intro-title {
@@ -21,11 +33,107 @@
     margin: 0;
     font-size: var(--fs-h3);
     background: var(--clr-accent);
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-secondary), serif;
     color: var(--clr-light);
-    padding: 1em;
+    padding: 0.85em 1em;
     margin-bottom: 1em;
     text-align: center;
+    min-height: 5.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.intro-role {
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 799px) {
+    .intro-subtitle {
+        display: block;
+        min-height: auto;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+    }
+
+    .intro-role {
+        margin-bottom: 0.15em;
+    }
+
+    .intro-specialty-stagger {
+        display: block;
+    }
+}
+
+.intro-specialty-stagger {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.intro-specialty-sizer {
+    display: grid;
+    visibility: hidden;
+}
+
+.intro-specialty-sizer > span {
+    grid-area: 1 / 1;
+    white-space: pre-line;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.intro-specialty-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.intro-specialty-line {
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+    --line-fade-duration: 800ms; /* keep in sync with LINE_FADE_DURATION_MS in Intro.tsx */
+}
+
+.intro-specialty-line.is-visible {
+    opacity: 1;
+}
+
+.intro-specialty-line.is-hidden {
+    opacity: 0;
+}
+
+.intro-specialty-line.is-hiding {
+    animation: intro-line-out var(--line-fade-duration) ease-in-out forwards;
+}
+
+.intro-specialty-line.is-showing {
+    animation: intro-line-in var(--line-fade-duration) ease-in-out forwards;
+}
+
+@keyframes intro-line-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes intro-line-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .intro-img, .tilt {
@@ -37,7 +145,7 @@
 
 /* Rearrange things when screen size is big enough */
 @media (min-width: 800px) {
-    .intro {
+    .intro-content {
         display: grid;
         grid-column-gap: 1em;
         max-width: min-content;

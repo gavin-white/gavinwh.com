@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Navbar, {NAVBAR_HEIGHT} from './components/Navbar';
 import Intro from './components/Intro';
 import About from './components/About';
-import Beyond from './components/Beyond';
 import Conact from './components/Contact';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
@@ -41,7 +40,6 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" Component={HomePage} />
-        <Route path="/projects" Component={ProjectsPage} />
         <Route path="/resume" Component={ResumePage} />
         <Route path="*" Component={NotFound} />
       </Routes>
@@ -58,16 +56,8 @@ const HomePage: React.FC = () => {
     <>
       <Intro />
       <About />
-      <Beyond />
-      <Conact />
-    </>
-  );
-};
-
-const ProjectsPage: React.FC = () => {
-  return (
-    <>
       <Projects />
+      <Conact />
     </>
   );
 };

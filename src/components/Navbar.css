@@ -10,7 +10,16 @@
 .mobile-header {
     z-index: 100;
     top: 0;
-    position: sticky;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-header.navbar-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .gradient {
@@ -27,8 +36,8 @@
 
 .nav-list {
     margin: 0;
-    background-color: var(--clr-light);
-    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0;
+    background-color: rgba(20, 20, 20, 0.95);
     overflow: hidden;
     list-style-type: none;
     height: 50px;
@@ -38,42 +47,34 @@
 
 .nav-list li a {
     float: left;
-    color: var(--clr-dark);
+    color: var(--clr-light);
     text-align: center;
-    padding: 0px 16px;
+    padding: 0 16px;
     text-decoration: none;
     font-size: var(--fs-navbar);
-    font-family: var(--ff-ternary);
+    font-family: var(--ff-ternary), serif;
     margin: 0;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-list .social_item a i {
-    color: var(--clr-dark);
-    vertical-align: middle;
-    text-align: center;
-    padding: 0px 16px;
-    text-decoration: none;
-    font-size: var(--fs-icons);
-    margin: 0;
+.nav-list li a:hover {
+    color: var(--clr-superbright);
 }
 
-.nav-list .social_item a {
-    float: right;
+.nav-list li a.active {
+    color: var(--clr-superbright);
+    border-bottom-color: var(--clr-superbright);
 }
 
-.nav-list li a:hover,
-.nav-list li a i:hover {
-    color: var(--clr-bright);
-}
-
-/* Hide GitHub and LinkedIn icons at small screen sizes */
 @media (max-width: 700px) {
-    .nav-list .social_item a {
-        display: none;
-    }
-
     .nav-list {
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .nav-list li a {
+        float: none;
+        padding: 0 10px;
     }
 }
