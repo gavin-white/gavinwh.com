@@ -9,10 +9,7 @@ const About: React.FC = () => {
         <div className="abt-section">
           <h3>My Experience</h3>
           <p>
-            I’m a software engineer with experience building backend systems, distributed services, and applied computer vision infrastructure. Previously, I worked at Wayfair, where I contributed to large-scale e-commerce systems powering order placement and order data access. My work included designing and maintaining high-throughput APIs, improving event-driven workflows, and building resilient backend infrastructure that could handle production-scale traffic reliably.
-          </p>
-          <p>
-            I’ve worked across areas like API design, data access patterns, asynchronous processing, event publishing, system validation, and operational reliability. I enjoy solving problems where correctness, performance, and maintainability all matter, especially in systems that need to operate reliably at scale.
+            I’m a software engineer with experience building backend systems, distributed services, and applied computer vision infrastructure. Previously, I worked at Wayfair, where I contributed to large-scale e-commerce systems powering order placement and order data access. My work included designing and maintaining high-throughput APIs, implementing event-driven workflows and asynchronous processing, and building resilient backend infrastructure with strong data access patterns, system validation, and operational reliability—problems where correctness, performance, and maintainability all had to hold up at production scale.
           </p>
           <p>
             Before that, I worked as a research software engineer co-op at Delsys, contributing to computer vision infrastructure, algorithm development, and software for multi-sensor data capture. My work included incorporating deep learning models into computer vision workflows and applying them at scale in performance-sensitive research systems.
