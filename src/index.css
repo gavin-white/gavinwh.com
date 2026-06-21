@@ -24,16 +24,28 @@
     --clr-surface: #1a1a1a;
     --clr-border: rgba(255, 255, 255, 0.12);
 
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-    --fs-icons: 2rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1rem;
+    --fs-body: 0.9rem;
+    --fs-icons: 2.5rem;
     --fs-navbar: 1.1rem;
     --fs-form: 0.9rem;
 
     --shadow: .25em .25em .75em rgba(0, 0, 0, 0.5);
     --lightshadow: .25em .25em .75em rgba(0, 0, 0, 0.2);
+}
+
+/* Increase font sizes when the window is large */
+@media (min-width: 500px) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 2.25rem;
+        --fs-h3: 1.25rem;
+        --fs-body: 1rem;
+        --fs-icons: 2.5rem;
+        --fs-navbar: 1.1rem;
+    }
 }
 
 /* Increase font sizes when the window is large */
@@ -43,7 +55,7 @@
       --fs-h2: 2.5rem;
       --fs-h3: 1.5rem;
       --fs-body: 1.125rem;
-      --fs-icons: 2.2rem;
+      --fs-icons: 2.5rem;
       --fs-navbar: 1.2rem;
   }
 }
@@ -55,7 +67,7 @@
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
-        --fs-icons: 2.25rem;
+        --fs-icons: 2.5rem;
         --fs-navbar: 1.25rem;
     }
 }
