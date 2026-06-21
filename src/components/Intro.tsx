@@ -117,7 +117,7 @@ const Intro: React.FC = () => {
             </div>
           </div>
         </div>
-        <Tilt className="tilt" tiltMaxAngleX={12.5} tiltMaxAngleY={12.5} scale={1} transitionSpeed={100}>
+        <Tilt className="tilt" tiltMaxAngleX={2.5} tiltMaxAngleY={2.5} scale={1} transitionSpeed={100}>
           <img src={`${process.env.PUBLIC_URL}/img/gavinpic.jpg`} alt="Gavin" className="intro-img" />
         </Tilt>
       </div>
