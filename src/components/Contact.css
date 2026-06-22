@@ -52,11 +52,12 @@
 .contact-link {
     display: flex;
     align-items: center;
-    gap: 1.25em;
+    justify-content: flex-start;
+    gap: 0.85em;
+    min-width: 0;
     text-decoration: none;
     color: var(--clr-light);
-    font-size: var(--fs-h3);
-    padding: 1.25em 1.5em;
+    padding: 1.25em 1.25em;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -68,10 +69,12 @@
 }
 
 .contact-link i {
-    font-size: var(--fs-icons);
     flex-shrink: 0;
-    width: 1.5em;
-    text-align: center;
+    width: auto;
+    text-align: left;
+    line-height: 1;
+    /* Match roughly the combined height of label + detail lines */
+    font-size: calc((var(--fs-h3) + var(--fs-form)) * 1.28);
 }
 
 .contact-link-text {
@@ -79,23 +82,25 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.2em;
+    flex: 1;
     min-width: 0;
     text-align: left;
-    font-size: inherit;
-    line-height: 1.25;
 }
 
 .contact-link-text strong {
     font-family: var(--ff-ternary), serif;
-    font-size: inherit;
+    font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
-    line-height: inherit;
+    line-height: 1.25;
 }
 
 .contact-link-detail {
-    font-family: var(--ff-ternary), serif;
-    font-size: inherit;
-    line-height: inherit;
+    font-family: var(--ff-secondary), serif;
+    font-size: var(--fs-form);
+    line-height: 1.25;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     opacity: 0.75;
 }
@@ -110,16 +115,6 @@
         padding-left: 1em;
         padding-right: 1em;
     }
-
-    .contact-link {
-        gap: 0.85em;
-        padding: 1em 1.1em;
-    }
-
-    .contact-link i {
-        font-size: 1.75rem;
-        width: 1.25em;
-    }
 }
 
 @media (min-width: 800px) {
@@ -130,19 +125,5 @@
 
     .contact-links li:first-child {
         grid-column: 1 / -1;
-    }
-
-    .contact-links li:first-child .contact-link {
-        justify-content: flex-start;
-        text-align: left;
-    }
-
-    .contact-links li:first-child .contact-link-text {
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .contact-link {
-        padding: 1.5em 2em;
     }
 }
